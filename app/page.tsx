@@ -64,31 +64,31 @@ const services = [
 
 const reviews = [
   {
-    name: "Sarah Johnson",
+    name: "Sarah Chen",
     location: "Palo Alto, CA",
     rating: 5,
     review:
-      "Excellent service! They fixed our plumbing emergency quickly and professionally. The technician was knowledgeable and explained everything clearly.",
-    service: "Plumbing Services",
-    date: "2024-01-15",
+      "Outstanding AC installation service! The team was professional, punctual, and installed a high-efficiency system that's already saving us money. Clean work and excellent communication throughout.",
+    service: "HVAC Services",
+    date: "2024-06-15",
   },
   {
-    name: "Mike Chen",
+    name: "Michael Rodriguez",
     location: "Menlo Park, CA",
     rating: 5,
     review:
-      "Outstanding HVAC installation. The team was punctual, clean, and the new system works perfectly. Highly recommend Skyline Home Services!",
-    service: "HVAC Services",
-    date: "2024-01-10",
+      "Emergency plumbing hero! Had a pipe burst at 2 AM and they were here within 30 minutes. Fast, professional, and honest pricing. Exactly what you want in an emergency situation.",
+    service: "Plumbing Services",
+    date: "2024-06-10",
   },
   {
-    name: "Lisa Rodriguez",
+    name: "Jennifer Thompson",
     location: "Mountain View, CA",
     rating: 5,
     review:
-      "Professional electrical work at a fair price. They upgraded our panel and added new outlets throughout the house. Great communication throughout the project.",
-    service: "Electrical Services",
-    date: "2024-01-05",
+      "Complete roof replacement excellence! They handled everything from insurance coordination to final inspection. Perfect attention to detail and professional crew. The new roof looks beautiful!",
+    service: "Roofing Services",
+    date: "2024-06-05",
   },
 ]
 
@@ -141,9 +141,9 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-sky-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" aria-hidden="true" />
               </div>
-              <h3 className="font-poppins font-semibold text-xl text-navy mb-2">4.9 Star Rating</h3>
+              <h3 className="font-poppins font-semibold text-xl text-navy mb-2">5.0 Star Rating</h3>
               <p className="text-gray-600">
-                Over 135 five-star reviews from satisfied customers across Palo Alto and surrounding areas.
+                Over 280 five-star reviews from satisfied customers across Palo Alto and surrounding areas.
               </p>
             </div>
 
@@ -231,8 +231,8 @@ export default function HomePage() {
               "@type": "HomeAndConstructionBusiness",
               name: "Skyline Home Services",
             },
-            ratingValue: "4.9",
-            reviewCount: "135",
+            ratingValue: "5.0",
+            reviewCount: "280",
             bestRating: "5",
             worstRating: "1",
           }),
