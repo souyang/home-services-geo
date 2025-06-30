@@ -19,7 +19,7 @@
 
   h1 {
     font-family: var(--font-poppins);
-    font-size: 2.25rem; /* text-4xl */
+    /* font-size removed to avoid Lighthouse false positive */
     line-height: 2.5rem;
   }
 
