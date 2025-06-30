@@ -216,7 +216,7 @@ export default function ReviewsPage() {
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
                       <Avatar className="w-12 h-12">
-                        <AvatarImage src={`/avatars/${review.avatar.toLowerCase()}.jpg`} />
+                        <AvatarImage src={`/avatars/${review.avatar.toLowerCase()}.svg`} alt={review.avatar} className="w-12 h-12" />
                         <AvatarFallback className="bg-sky-blue text-white font-semibold">
                           {review.avatar}
                         </AvatarFallback>
