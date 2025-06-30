@@ -87,7 +87,7 @@ export default function RoofingPage() {
             </p>
             <a 
               href="/contact/" 
-              className="bg-orange-600 hover:bg-orange-700 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+              className="bg-orange-800 hover:bg-orange-900 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
             >
               Schedule Roof Inspection
             </a>

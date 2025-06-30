@@ -100,12 +100,9 @@ export default function FreeMap({
           closeButton: true,
           maxWidth: 300
         }).setContent(`
-          <div style="padding: 8px;">
-            <h3 style="margin: 0 0 4px 0; font-size: 14px; font-weight: 600; color: #1e293b;">${location}</h3>
-            <p style="margin: 0; font-size: 12px; color: #64748b;">${address}</p>
-            <p style="margin: 4px 0 0 0; font-size: 11px; color: #94a3b8;">
-              Coordinates: ${coordinates.lat.toFixed(4)}, ${coordinates.lng.toFixed(4)}
-            </p>
+          <div style="padding: 20px;">
+            <h3 style="margin: 0 0 4px 0; font-size: 14px; font-weight: 600; color: #0f172a;">${location}</h3>
+            <p style="margin: 0; font-size: 12px; color: #334155;">${address}</p>
           </div>
         `)
 
