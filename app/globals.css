@@ -29,7 +29,7 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-sky-blue hover:bg-sky-blue/90 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2;
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium px-6 py-3 rounded-lg transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2;
   }
 
   .btn-secondary {
