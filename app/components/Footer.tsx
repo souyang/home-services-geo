@@ -114,11 +114,11 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-sky-blue flex-shrink-0" aria-hidden="true" />
                 <a
-                  href="mailto:info@skylinehomesvc.com"
+                  href="mailto:simonouyang@yahoo.com"
                   className="text-gray-300 hover:text-sky-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 focus:ring-offset-navy rounded"
-                  aria-label="Email us at info@skylinehomesvc.com"
+                  aria-label="Email us at simonouyang@yahoo.com"
                 >
-                  info@skylinehomesvc.com
+                  simonouyang@yahoo.com
                 </a>
               </div>
               <div className="flex items-start space-x-3">

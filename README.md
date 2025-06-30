@@ -218,7 +218,7 @@ const nextConfig = {
 - **Company**: Skyline Home Services
 - **Address**: 2211 Elm Street, Palo Alto, CA 94301
 - **Phone**: (650) 555-0199
-- **Email**: info@skylinehomesvc.com
+- **Email**: simonouyang@yahoo.com
 - **Hours**: Mon-Sat 8AM-6PM, Sunday Closed
 - **Emergency**: 24/7 Available
 - **Service Areas**: Palo Alto, Menlo Park, Mountain View

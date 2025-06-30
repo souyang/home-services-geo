@@ -56,11 +56,11 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-navy mb-1">Email</h3>
                     <a
-                      href="mailto:info@skylinehomesvc.com"
+                      href="mailto:simonouyang@yahoo.com"
                       className="text-gray-600 hover:text-sky-blue transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded"
-                      aria-label="Email us at info@skylinehomesvc.com"
+                      aria-label="Email us at simonouyang@yahoo.com"
                     >
-                      info@skylinehomesvc.com
+                      simonouyang@yahoo.com
                     </a>
                     <p className="text-sm text-gray-500 mt-1">We respond within 24 hours</p>
                   </div>
@@ -136,8 +136,8 @@ export default function ContactPage() {
                 addressCountry: "US",
               },
               telephone: "(650) 555-0199",
-              email: "info@skylinehomesvc.com",
-              url: "https://skylinehomesvc.com",
+              email: "simonouyang@yahoo.com",
+              url: "https://skylinehomesvc.vercel.app",
               openingHours: ["Mo-Sa 08:00-18:00"],
             },
           }),

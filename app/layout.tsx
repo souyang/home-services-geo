@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://skylinehomesvc.com",
+    url: "https://skylinehomesvc.vercel.app",
     siteName: "Skyline Home Services",
     title: "Skyline Home Services - Professional Home Services in Palo Alto, CA",
     description:
@@ -78,7 +78,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "HomeAndConstructionBusiness",
               name: "Skyline Home Services",
-              image: "https://skylinehomesvc.com/logo.png",
+              image: "https://skylinehomesvc.vercel.app/logo.png",
               description:
                 "Professional plumbing, HVAC, electrical, and roofing services in Palo Alto, Menlo Park, and Mountain View.",
               address: {
@@ -95,8 +95,8 @@ export default function RootLayout({
                 longitude: -122.143,
               },
               telephone: "(650) 555-0199",
-              email: "info@skylinehomesvc.com",
-              url: "https://skylinehomesvc.com",
+              email: "simonouyang@yahoo.com",
+              url: "https://skylinehomesvc.vercel.app",
               openingHours: ["Mo-Sa 08:00-18:00"],
               areaServed: [
                 {

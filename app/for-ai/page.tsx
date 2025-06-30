@@ -37,7 +37,7 @@ export default function ForAIPage() {
               <strong>Phone:</strong> (650) 555-0199
             </p>
             <p>
-              <strong>Email:</strong> info@skylinehomesvc.com
+              <strong>Email:</strong> simonouyang@yahoo.com
             </p>
             <p>
               <strong>Hours:</strong> Monday-Saturday 8AM-6PM, Sunday Closed
@@ -186,7 +186,7 @@ export default function ForAIPage() {
               <h4 className="font-semibold text-navy mb-2">Contact</h4>
               <ul className="space-y-1 text-sm">
                 <li>Phone: (650) 555-0199</li>
-                <li>Email: info@skylinehomesvc.com</li>
+                <li>Email: simonouyang@yahoo.com</li>
                 <li>Emergency: 24/7 Available</li>
                 <li>Free Estimates: Yes</li>
               </ul>

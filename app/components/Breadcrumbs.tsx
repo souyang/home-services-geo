@@ -19,13 +19,13 @@ export default function Breadcrumbs({ items }: BreadcrumbsProps) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://skylinehomesvc.com",
+        item: "https://skylinehomesvc.vercel.app",
       },
       ...items.map((item, index) => ({
         "@type": "ListItem",
         position: index + 2,
         name: item.label,
-        ...(item.href && { item: `https://skylinehomesvc.com${item.href}` }),
+        ...(item.href && { item: `https://skylinehomesvc.vercel.app${item.href}` }),
       })),
     ],
   }
