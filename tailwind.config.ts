@@ -62,7 +62,7 @@ const config: Config = {
           ring: "hsl(var(--sidebar-ring))",
         },
         navy: "#1C2C4C",
-        "sky-blue": "#3ABEF9",
+        "sky-blue": "#1E88E5",
         "light-gray": "#F4F4F4",
       },
       borderRadius: {
@@ -99,5 +99,5 @@ const config: Config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
 export default config
