@@ -15,6 +15,7 @@ export default function ContactForm() {
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData((prev) => ({
@@ -26,20 +27,36 @@ export default function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
+    setSubmitStatus("idle")
+    setErrorMessage("")
 
-    // Simulate form submission
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000))
-      setSubmitStatus("success")
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        service: "",
-        message: "",
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
       })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setSubmitStatus("success")
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          message: "",
+        })
+      } else {
+        setSubmitStatus("error")
+        setErrorMessage(result.error || "Failed to send message")
+      }
     } catch (error) {
       setSubmitStatus("error")
+      setErrorMessage("Network error. Please try again or call us directly.")
     } finally {
       setIsSubmitting(false)
     }
@@ -54,7 +71,7 @@ export default function ContactForm() {
       {submitStatus === "success" && (
         <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg" role="alert">
           <p className="text-green-800">
-            Thank you! We'll contact you within 24 hours to schedule your free consultation.
+            Thank you! Your message has been sent to simonouyang@yahoo.com. We'll contact you within 24 hours to schedule your free consultation.
           </p>
         </div>
       )}
@@ -62,7 +79,7 @@ export default function ContactForm() {
       {submitStatus === "error" && (
         <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg" role="alert">
           <p className="text-red-800">
-            Sorry, there was an error submitting your form. Please try again or call us directly.
+            {errorMessage || "Sorry, there was an error submitting your form. Please try again or call us directly at (650) 555-0199."}
           </p>
         </div>
       )}
@@ -138,7 +155,7 @@ export default function ContactForm() {
 
         <div className="mb-6">
           <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-            Project Description
+            Project Description *
           </label>
           <textarea
             id="message"
@@ -146,9 +163,17 @@ export default function ContactForm() {
             rows={4}
             value={formData.message}
             onChange={handleChange}
+            required
             className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-blue focus:border-transparent transition-colors duration-200 resize-vertical"
             placeholder="Tell us about your project..."
           ></textarea>
+        </div>
+
+        <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+          <p className="text-sm text-blue-800">
+            <strong>Note: </strong> 
+            We'll respond within 24 hours to schedule your free consultation.
+          </p>
         </div>
 
         <button
@@ -163,7 +188,7 @@ export default function ContactForm() {
                 className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"
                 aria-hidden="true"
               ></div>
-              <span>Submitting...</span>
+              <span>Sending Message...</span>
             </>
           ) : (
             <>
