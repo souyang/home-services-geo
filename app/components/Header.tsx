@@ -7,11 +7,11 @@ import { Menu, X, Phone, ChevronDown } from "lucide-react"
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false)
+  const [isServiceAreasDropdownOpen, setIsServiceAreasDropdownOpen] = useState(false)
 
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about/" },
-    { name: "Service Areas", href: "/service-area/" },
     { name: "Reviews", href: "/reviews/" },
     { name: "Contact", href: "/contact/" },
   ]
@@ -22,6 +22,13 @@ export default function Header() {
     { name: "HVAC", href: "/services/hvac/" },
     { name: "Roofing", href: "/services/roofing/" },
     { name: "Electrical", href: "/services/electrical/" },
+  ]
+
+  const serviceAreas = [
+    { name: "All Service Areas", href: "/service-area/" },
+    { name: "Palo Alto", href: "/service-area/palo-alto/" },
+    { name: "Menlo Park", href: "/service-area/menlo-park/" },
+    { name: "Mountain View", href: "/service-area/mountain-view/" },
   ]
 
   return (
@@ -86,13 +93,36 @@ export default function Header() {
               )}
             </div>
             
-            <Link
-              href="/service-area/"
-              className="relative text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
-            >
-              <span className="group-hover:font-semibold transition-all duration-300">Service Areas</span>
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
-            </Link>
+            {/* Service Areas Dropdown */}
+            <div className="relative">
+              <button
+                className="relative flex items-center space-x-1 text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
+                onClick={() => setIsServiceAreasDropdownOpen(!isServiceAreasDropdownOpen)}
+                onBlur={() => setTimeout(() => setIsServiceAreasDropdownOpen(false), 150)}
+                aria-expanded={isServiceAreasDropdownOpen}
+                aria-haspopup="true"
+              >
+                <span className="group-hover:font-semibold transition-all duration-300">Service Areas</span>
+                <ChevronDown className={`w-4 h-4 transition-all duration-300 ${isServiceAreasDropdownOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
+              </button>
+              
+              {isServiceAreasDropdownOpen && (
+                <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-200 py-1 z-50 animate-in fade-in-0 slide-in-from-top-1 duration-200">
+                  {serviceAreas.map((area) => (
+                    <Link
+                      key={area.name}
+                      href={area.href}
+                      className="relative block px-4 py-2 text-sm text-gray-700 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                      onClick={() => setIsServiceAreasDropdownOpen(false)}
+                    >
+                      <span className="group-hover:font-semibold transition-all duration-200">{area.name}</span>
+                      <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-sky-blue transform scale-x-0 group-hover:scale-x-100 transition-transform duration-200 origin-left"></span>
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
             
             <Link
               href="/reviews/"
@@ -178,13 +208,22 @@ export default function Header() {
                 </div>
               </div>
               
-              <Link
-                href="/service-area/"
-                className="block px-3 py-2 text-gray-700 hover:text-sky-blue hover:bg-gray-50 font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <span className="group-hover:font-semibold transition-all duration-200">Service Areas</span>
-              </Link>
+              {/* Mobile Service Areas Section */}
+              <div className="px-3 py-2">
+                <div className="text-gray-700 font-medium mb-2 group-hover:font-semibold transition-all duration-200">Service Areas</div>
+                <div className="pl-4 space-y-1">
+                  {serviceAreas.map((area) => (
+                    <Link
+                      key={area.name}
+                      href={area.href}
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <span className="group-hover:font-semibold transition-all duration-200">{area.name}</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
               
               <Link
                 href="/reviews/"
