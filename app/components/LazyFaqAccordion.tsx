@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import { HelpCircle } from 'lucide-react'
+import LoadingSpinner from './LoadingSpinner'
 
 // Dynamically import FaqAccordion with loading fallback
 const FaqAccordion = dynamic(() => import('./FaqAccordion'), {
@@ -12,14 +13,7 @@ const FaqAccordion = dynamic(() => import('./FaqAccordion'), {
         <HelpCircle className="w-6 h-6 text-sky-blue" />
         <h3 className="font-poppins font-semibold text-xl text-navy">Loading FAQ...</h3>
       </div>
-      <div className="space-y-3">
-        {[...Array(3)].map((_, i) => (
-          <div key={i} className="animate-pulse">
-            <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
-            <div className="h-3 bg-gray-100 rounded w-1/2"></div>
-          </div>
-        ))}
-      </div>
+      <LoadingSpinner size="sm" text="Loading questions..." />
     </div>
   ),
   ssr: false
@@ -41,14 +35,7 @@ export default function LazyFaqAccordion(props: LazyFaqAccordionProps) {
           <HelpCircle className="w-6 h-6 text-sky-blue" />
           <h3 className="font-poppins font-semibold text-xl text-navy">Loading FAQ...</h3>
         </div>
-        <div className="space-y-3">
-          {[...Array(3)].map((_, i) => (
-            <div key={i} className="animate-pulse">
-              <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
-              <div className="h-3 bg-gray-100 rounded w-1/2"></div>
-            </div>
-          ))}
-        </div>
+        <LoadingSpinner size="sm" text="Loading questions..." />
       </div>
     }>
       <FaqAccordion {...props} />

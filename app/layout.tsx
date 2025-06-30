@@ -6,6 +6,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import SkipToContent from "./components/SkipToContent"
 import AskUsBot from "./components/AskUsBot"
+import NavigationProgress from "./components/NavigationProgress"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -134,6 +135,7 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-gray-50 font-inter antialiased">
+        <NavigationProgress />
         <SkipToContent />
         <Header />
         <main id="main-content" className="flex-1">
