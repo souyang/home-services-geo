@@ -108,7 +108,7 @@ export default function AboutPage() {
                 <h3 className="font-semibold text-navy mb-2">Plumbing</h3>
                 <p className="text-sm text-gray-600 mb-4">Emergency repairs, water heaters, pipe replacement, and drain cleaning</p>
                 <Link href="/services/plumbing/" className="text-blue-700 font-semibold  hover:underline text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded">
-                  Learn More →
+                  Learn More About Plumbing →
                 </Link>
               </div>
               
@@ -121,7 +121,7 @@ export default function AboutPage() {
                 <h3 className="font-semibold text-navy mb-2">HVAC</h3>
                 <p className="text-sm text-gray-600 mb-4">AC installation, furnace repair, duct cleaning, and energy efficiency</p>
                 <Link href="/services/hvac/" className="text-blue-700 font-semibold  hover:underline text-sm focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded">
-                  Learn More →
+                  Learn More About HVAC →
                 </Link>
               </div>
               
@@ -134,7 +134,7 @@ export default function AboutPage() {
                 <h3 className="font-semibold text-navy mb-2">Electrical</h3>
                 <p className="text-sm text-gray-600 mb-4">Panel upgrades, outlet installation, lighting, and safety inspections</p>
                 <Link href="/services/electrical/" className="text-blue-700 font-semibold  hover:underline text-sm font-medium focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded">
-                  Learn More →
+                  Learn More About Electrical →
                 </Link>
               </div>
               
@@ -147,7 +147,7 @@ export default function AboutPage() {
                 <h3 className="font-semibold text-navy mb-2">Roofing</h3>
                 <p className="text-sm text-gray-600 mb-4">Inspections, leak repairs, gutter services, and complete replacement</p>
                 <Link href="/services/roofing/" className="text-blue-700 font-semibold  hover:underline text-sm focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded">
-                  Learn More →
+                  Learn More About Roofing →
                 </Link>
               </div>
             </div>
@@ -209,21 +209,21 @@ export default function AboutPage() {
                 <h3 className="font-semibold text-navy mb-2">Palo Alto</h3>
                 <p className="text-sm text-gray-600">Downtown, Midtown, Old Palo Alto, College Terrace</p>
                 <Link href="/service-area/palo-alto/" className="text-blue-700 font-semibold  hover:underline text-sm focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded">
-                  Learn More →
+                  Learn More About Palo Alto →
                 </Link>
               </div>
               <div className="text-center" role="listitem">
                 <h3 className="font-semibold text-navy mb-2">Menlo Park</h3>
                 <p className="text-sm text-gray-600">Downtown, Allied Arts, Sharon Heights, Stanford Hills</p>
                 <Link href="/service-area/menlo-park/" className="text-blue-700 font-semibold  first-letter:hover:underline text-sm focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded">
-                  Learn More →
+                  Learn More About Menlo Park →
                 </Link>
               </div>
               <div className="text-center" role="listitem">
                 <h3 className="font-semibold text-navy mb-2">Mountain View</h3>
                 <p className="text-sm text-gray-600">Downtown, North Bayshore, Old Mountain View, Wagon Wheel</p>
                 <Link href="/service-area/mountain-view/" className="text-blue-700 font-semibold hover:underline text-sm focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded">
-                  Learn More →
+                  Learn More About Mountain View →
                 </Link>
               </div>
             </div>

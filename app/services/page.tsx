@@ -99,8 +99,8 @@ export default function ServicesPage() {
               Save money with our bundled service packages. We can handle multiple home improvement projects
               efficiently.
             </p>
-            <a href="/contact/" className="btn-primary" aria-label="Contact us for bundled service pricing">
-              Get Custom Quote
+            <a href="/contact/" className="btn-primary" aria-label="Contact us for bundled service pricing and custom quotes">
+              Get Bundled Service Quote
             </a>
           </div>
         </div>
