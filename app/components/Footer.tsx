@@ -137,6 +137,17 @@ export default function Footer() {
             © {new Date().getFullYear()} Skyline Home Services. All rights reserved. |
             <span className="ml-1">Licensed & Insured</span>
           </p>
+          <div className="mt-4">
+            <a
+              href="https://bolt.new"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-3 py-1 bg-sky-blue text-white text-sm font-medium rounded-full hover:bg-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 focus:ring-offset-navy"
+              aria-label="Built with Bolt.new - Visit Bolt.new"
+            >
+              Built with Bolt.new
+            </a>
+          </div>
         </div>
       </div>
     </footer>
