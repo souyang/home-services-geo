@@ -1,0 +1,16 @@
+{
+  "name": "Skyline Home Services",
+  "short_name": "Skyline",
+  "description": "Professional home services in Palo Alto, Menlo Park, and Mountain View",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1E88E5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+} 

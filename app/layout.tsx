@@ -31,6 +31,12 @@ export const metadata: Metadata = {
   authors: [{ name: "Skyline Home Services" }],
   creator: "Skyline Home Services",
   publisher: "Skyline Home Services",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+  },
+  manifest: "/site.webmanifest",
   robots: {
     index: true,
     follow: true,
