@@ -4,7 +4,7 @@ import { MapPin, Phone, Clock, Star, CheckCircle, Users, Award } from "lucide-re
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import FreeMap from "@/app/components/FreeMap"
+import LazyFreeMapClientWrapper from '@/app/components/LazyFreeMapClientWrapper'
 
 export const metadata: Metadata = {
   title: "Mountain View Home Services - Plumbing, HVAC, Electrical, Roofing | Skyline Home Services",
@@ -135,7 +135,7 @@ export default function MountainViewPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <FreeMap
+                  <LazyFreeMapClientWrapper
                     location={mountainViewData.civicCenter.name}
                     address={mountainViewData.civicCenter.address}
                     coordinates={mountainViewData.civicCenter.coordinates}

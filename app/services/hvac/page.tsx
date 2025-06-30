@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import Breadcrumbs from '../../components/Breadcrumbs'
-import FaqAccordion from '../../components/FaqAccordion'
-import ContactForm from '../../components/ContactForm'
+import LazyFaqAccordion from '../../components/LazyFaqAccordion'
+import LazyContactForm from '../../components/LazyContactForm'
 
 export const metadata: Metadata = {
   title: "Professional HVAC Services - Heating & Air Conditioning | Skyline Home Services",
@@ -93,7 +93,7 @@ export default function HvacPage() {
             </a>
           </div>
 
-          <FaqAccordion 
+          <LazyFaqAccordion 
             title="HVAC Services FAQ"
             faqs={[
               {
@@ -120,7 +120,7 @@ export default function HvacPage() {
           />
 
           <div className="mt-12">
-            <ContactForm />
+            <LazyContactForm />
           </div>
         </div>
       </div>

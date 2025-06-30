@@ -4,7 +4,7 @@ import { MapPin, Phone, Clock, Star } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import FreeMap from "@/app/components/FreeMap"
+import IntersectionMap from "@/app/components/IntersectionMap"
 
 export const metadata: Metadata = {
   title: "Service Areas - Palo Alto, Menlo Park, Mountain View | Skyline Home Services",
@@ -88,7 +88,7 @@ export default function ServiceAreasPage() {
                 <CardContent className="p-6">
                   {/* Map Placeholder */}
                   <div className="mb-6 bg-gray-100 rounded-lg overflow-hidden">
-                    <FreeMap
+                    <IntersectionMap
                       location={area.civicCenter}
                       address={area.address}
                       coordinates={area.coordinates}

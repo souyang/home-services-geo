@@ -4,7 +4,7 @@ import { MapPin, Phone, Clock, Star, CheckCircle, Users, Award } from "lucide-re
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import FreeMap from "@/app/components/FreeMap"
+import LazyFreeMapClientWrapper from '@/app/components/LazyFreeMapClientWrapper'
 
 export const metadata: Metadata = {
   title: "Palo Alto Home Services - Plumbing, HVAC, Electrical, Roofing | Skyline Home Services",
@@ -135,7 +135,7 @@ export default function PaloAltoPage() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="p-0">
-                  <FreeMap
+                  <LazyFreeMapClientWrapper
                     location={paloAltoData.civicCenter.name}
                     address={paloAltoData.civicCenter.address}
                     coordinates={paloAltoData.civicCenter.coordinates}

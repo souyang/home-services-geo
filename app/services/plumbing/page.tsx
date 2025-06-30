@@ -1,7 +1,7 @@
 import { Metadata } from "next"
 import Breadcrumbs from '../../components/Breadcrumbs'
-import FaqAccordion from '../../components/FaqAccordion'
-import ContactForm from '../../components/ContactForm'
+import LazyFaqAccordion from '../../components/LazyFaqAccordion'
+import LazyContactForm from '../../components/LazyContactForm'
 
 export const metadata: Metadata = {
   title: "Professional Plumbing Services | Skyline Home Services",
@@ -93,7 +93,7 @@ export default function PlumbingPage() {
             </a>
           </div>
 
-          <FaqAccordion 
+          <LazyFaqAccordion 
             title="Plumbing Services FAQ"
             faqs={[
               {
@@ -120,7 +120,7 @@ export default function PlumbingPage() {
           />
 
           <div className="mt-12">
-            <ContactForm />
+            <LazyContactForm />
           </div>
         </div>
       </div>
