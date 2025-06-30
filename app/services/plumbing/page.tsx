@@ -4,7 +4,7 @@ import FaqAccordion from '../../components/FaqAccordion'
 import ContactForm from '../../components/ContactForm'
 
 export const metadata: Metadata = {
-  title: "Professional Plumbing Services in Palo Alto, CA | Skyline Home Services",
+  title: "Professional Plumbing Services | Skyline Home Services",
   description: "Expert plumbing services including emergency repairs, water heater installation, pipe replacement, and drain cleaning. Licensed plumbers serving Palo Alto, Menlo Park, and Mountain View.",
   keywords: ["plumber Palo Alto", "emergency plumbing", "water heater repair", "pipe replacement", "drain cleaning"],
 }
@@ -20,7 +20,7 @@ export default function PlumbingPage() {
       <div className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-poppins font-bold text-4xl sm:text-5xl text-navy mb-6">
-            Professional Plumbing Services in Palo Alto
+            Professional Plumbing Services
           </h1>
           
           <p className="text-xl text-gray-600 mb-8">

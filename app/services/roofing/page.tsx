@@ -4,7 +4,7 @@ import FaqAccordion from "../../components/FaqAccordion"
 import ContactForm from "../../components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Professional Roofing Services in Palo Alto, CA | Skyline Home Services",
+  title: "Professional Roofing Services | Skyline Home Services",
   description: "Expert roofing services including roof inspections, leak repairs, gutter installation, and complete roof replacement. Licensed roofers serving Palo Alto, Menlo Park, and Mountain View.",
   keywords: ["roofing Palo Alto", "roof repair", "gutter installation", "roof replacement", "roof inspection"],
 }
@@ -20,7 +20,7 @@ export default function RoofingPage() {
       <div className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-poppins font-bold text-4xl sm:text-5xl text-navy mb-6">
-            Professional Roofing Services in Palo Alto
+            Professional Roofing Services
           </h1>
           
           <p className="text-xl text-gray-600 mb-8">

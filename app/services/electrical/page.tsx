@@ -4,7 +4,7 @@ import FaqAccordion from "../../components/FaqAccordion"
 import ContactForm from "../../components/ContactForm"
 
 export const metadata: Metadata = {
-  title: "Professional Electrical Services in Palo Alto, CA | Skyline Home Services",
+  title: "Professional Electrical Services | Skyline Home Services",
   description: "Expert electrical services including panel upgrades, outlet installation, lighting solutions, and safety inspections. Licensed electricians serving Palo Alto, Menlo Park, and Mountain View.",
   keywords: ["electrician Palo Alto", "electrical repair", "panel upgrade", "lighting installation", "safety inspection"],
 }
@@ -20,7 +20,7 @@ export default function ElectricalPage() {
       <div className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-poppins font-bold text-4xl sm:text-5xl text-navy mb-6">
-            Professional Electrical Services in Palo Alto
+            Professional Electrical Services
           </h1>
           
           <p className="text-xl text-gray-600 mb-8">

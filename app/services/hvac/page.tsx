@@ -4,7 +4,7 @@ import FaqAccordion from '../../components/FaqAccordion'
 import ContactForm from '../../components/ContactForm'
 
 export const metadata: Metadata = {
-  title: "HVAC Services in Palo Alto, CA - Heating & Air Conditioning | Skyline Home Services",
+  title: "Professional HVAC Services - Heating & Air Conditioning | Skyline Home Services",
   description: "Professional HVAC services including AC installation, furnace repair, duct cleaning, and energy efficiency upgrades. Serving Palo Alto, Menlo Park, and Mountain View.",
   keywords: ["HVAC Palo Alto", "air conditioning repair", "furnace installation", "duct cleaning", "energy efficiency"],
 }
@@ -20,7 +20,7 @@ export default function HvacPage() {
       <div className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="font-poppins font-bold text-4xl sm:text-5xl text-navy mb-6">
-            HVAC Services in Palo Alto, CA
+            Professional HVAC Services
           </h1>
           
           <p className="text-xl text-gray-600 mb-8">
