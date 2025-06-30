@@ -110,9 +110,9 @@ export default function HomePage() {
       <section className="py-16 bg-white" aria-labelledby="services-title">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="services-title" className="font-poppins font-bold text-3xl sm:text-4xl text-navy mb-4">
+            <div id="services-title" className="font-poppins font-bold text-3xl sm:text-4xl text-navy mb-4">
               Our Services
-            </h2>
+            </div>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive home services to keep your property in perfect condition. All work backed by our
               satisfaction guarantee.
@@ -131,9 +131,9 @@ export default function HomePage() {
       <section className="py-16 bg-light-gray" aria-labelledby="why-choose-title">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 id="why-choose-title" className="font-poppins font-bold text-3xl sm:text-4xl text-navy mb-4">
+            <div id="why-choose-title" className="font-poppins font-bold text-3xl sm:text-4xl text-navy mb-4">
               Why Choose Skyline Home Services?
-            </h2>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -141,7 +141,7 @@ export default function HomePage() {
               <div className="w-16 h-16 bg-sky-blue rounded-full flex items-center justify-center mx-auto mb-4">
                 <Star className="w-8 h-8 text-white" aria-hidden="true" />
               </div>
-              <h3 className="font-poppins font-semibold text-xl text-navy mb-2">5.0 Star Rating</h3>
+              <div className="font-poppins font-semibold text-xl text-navy mb-2">5.0 Star Rating</div>
               <p className="text-gray-600">
                 Over 280 five-star reviews from satisfied customers across Palo Alto and surrounding areas.
               </p>
