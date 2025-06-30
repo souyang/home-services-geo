@@ -19,6 +19,7 @@ export default function FreeMap({
   zoom = 14 
 }: FreeMapProps) {
   const mapRef = useRef<HTMLDivElement>(null)
+  const mapInstanceRef = useRef<any>(null)
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
@@ -27,6 +28,12 @@ export default function FreeMap({
 
   useEffect(() => {
     if (!isClient || !mapRef.current) return
+
+    // Cleanup existing map if it exists
+    if (mapInstanceRef.current) {
+      mapInstanceRef.current.remove()
+      mapInstanceRef.current = null
+    }
 
     // Dynamically import Leaflet only on client side
     const initMap = async () => {
@@ -74,6 +81,7 @@ export default function FreeMap({
 
         // Initialize map
         const map = L.map(mapRef.current!).setView([coordinates.lat, coordinates.lng], zoom)
+        mapInstanceRef.current = map
 
         // Add OpenStreetMap tiles
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -103,17 +111,21 @@ export default function FreeMap({
 
         marker.bindPopup(popup)
 
-        // Cleanup function
-        return () => {
-          map.remove()
-        }
       } catch (error) {
         console.error('Failed to load map:', error)
       }
     }
 
     initMap()
-  }, [isClient, coordinates, zoom, location, address])
+
+    // Cleanup function
+    return () => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.remove()
+        mapInstanceRef.current = null
+      }
+    }
+  }, [isClient, coordinates.lat, coordinates.lng, zoom]) // Only re-run when coordinates or zoom change
 
   // Show loading state during SSR
   if (!isClient) {
