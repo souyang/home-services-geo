@@ -2,7 +2,7 @@
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://home-services-geo.vercel.app/', // replace with your live domain
+  siteUrl: process.env.SITE_URL || 'https://skylinehomesvc.vercel.app', // replace with your live domain
   generateRobotsTxt: true,
   generateIndexSitemap: false,
   sitemapSize: 5000,
@@ -16,7 +16,7 @@ module.exports = {
       },
     ],
     additionalSitemaps: [
-      'https://home-services-geo.vercel.app/sitemap.xml', // replace with your actual domain
+      'https://skylinehomesvc.vercel.app/sitemap.xml', // replace with your actual domain
     ],
   },
 };
