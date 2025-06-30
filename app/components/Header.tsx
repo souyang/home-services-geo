@@ -48,7 +48,7 @@ export default function Header() {
           <nav className="hidden md:flex space-x-8" role="navigation" aria-label="Main navigation">
             <Link
               href="/"
-              className="relative text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
+              className="relative text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 rounded px-2 py-1 group"
             >
               <span className="group-hover:font-semibold transition-all duration-300">Home</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
@@ -56,7 +56,7 @@ export default function Header() {
             
             <Link
               href="/about/"
-              className="relative text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
+              className="relative text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 rounded px-2 py-1 group"
             >
               <span className="group-hover:font-semibold transition-all duration-300">About</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
@@ -65,7 +65,7 @@ export default function Header() {
             {/* Services Dropdown */}
             <div className="relative">
               <button
-                className="relative flex items-center space-x-1 text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
+                className="relative flex items-center space-x-1 text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 rounded px-2 py-1 group"
                 onClick={() => setIsServicesDropdownOpen(!isServicesDropdownOpen)}
                 onBlur={() => setTimeout(() => setIsServicesDropdownOpen(false), 150)}
                 aria-expanded={isServicesDropdownOpen}
@@ -82,7 +82,7 @@ export default function Header() {
                     <Link
                       key={service.name}
                       href={service.href}
-                      className="relative block px-4 py-2 text-sm text-gray-700 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                      className="relative block px-4 py-2 text-sm text-gray-700 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 group"
                       onClick={() => setIsServicesDropdownOpen(false)}
                     >
                       <span className="group-hover:font-semibold transition-all duration-200">{service.name}</span>
@@ -96,7 +96,7 @@ export default function Header() {
             {/* Service Areas Dropdown */}
             <div className="relative">
               <button
-                className="relative flex items-center space-x-1 text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
+                className="relative flex items-center space-x-1 text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 rounded px-2 py-1 group"
                 onClick={() => setIsServiceAreasDropdownOpen(!isServiceAreasDropdownOpen)}
                 onBlur={() => setTimeout(() => setIsServiceAreasDropdownOpen(false), 150)}
                 aria-expanded={isServiceAreasDropdownOpen}
@@ -113,7 +113,7 @@ export default function Header() {
                     <Link
                       key={area.name}
                       href={area.href}
-                      className="relative block px-4 py-2 text-sm text-gray-700 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                      className="relative block px-4 py-2 text-sm text-gray-700 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 group"
                       onClick={() => setIsServiceAreasDropdownOpen(false)}
                     >
                       <span className="group-hover:font-semibold transition-all duration-200">{area.name}</span>
@@ -126,7 +126,7 @@ export default function Header() {
             
             <Link
               href="/reviews/"
-              className="relative text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
+              className="relative text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 rounded px-2 py-1 group"
             >
               <span className="group-hover:font-semibold transition-all duration-300">Reviews</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
@@ -134,7 +134,7 @@ export default function Header() {
             
             <Link
               href="/contact/"
-              className="relative text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
+              className="relative text-gray-700 hover:text-sky-blue font-medium transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 rounded px-2 py-1 group"
             >
               <span className="group-hover:font-semibold transition-all duration-300">Contact</span>
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-sky-blue transition-all duration-300 group-hover:w-full"></span>
@@ -146,7 +146,7 @@ export default function Header() {
             <Phone className="w-4 h-4 text-sky-blue" aria-hidden="true" />
             <a
               href="tel:+16505550199"
-              className="relative text-navy font-semibold hover:text-sky-blue transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
+              className="relative text-navy font-semibold hover:text-sky-blue transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 rounded px-2 py-1 group"
               aria-label="Call us at (650) 555-0199"
             >
               <span className="group-hover:font-bold transition-all duration-300">(650) 555-0199</span>
@@ -157,7 +157,7 @@ export default function Header() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden p-2 rounded-md text-gray-700 hover:text-sky-blue hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 transition-all duration-200"
+            className="md:hidden p-2 rounded-md text-gray-700 hover:text-sky-blue hover:bg-gray-100 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 transition-all duration-200"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
@@ -177,7 +177,7 @@ export default function Header() {
             <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t">
               <Link
                 href="/"
-                className="block px-3 py-2 text-gray-700 hover:text-sky-blue hover:bg-gray-50 font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                className="block px-3 py-2 text-gray-700 hover:text-sky-blue hover:bg-gray-50 font-medium transition-all duration-200 rounded-md focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 group"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span className="group-hover:font-semibold transition-all duration-200">Home</span>
@@ -185,7 +185,7 @@ export default function Header() {
               
               <Link
                 href="/about/"
-                className="block px-3 py-2 text-gray-700 hover:text-sky-blue hover:bg-gray-50 font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                className="block px-3 py-2 text-gray-700 hover:text-sky-blue hover:bg-gray-50 font-medium transition-all duration-200 rounded-md focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 group"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span className="group-hover:font-semibold transition-all duration-200">About</span>
@@ -199,7 +199,7 @@ export default function Header() {
                     <Link
                       key={service.name}
                       href={service.href}
-                      className="block px-3 py-2 text-sm text-gray-600 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 rounded-md focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 group"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <span className="group-hover:font-semibold transition-all duration-200">{service.name}</span>
@@ -216,7 +216,7 @@ export default function Header() {
                     <Link
                       key={area.name}
                       href={area.href}
-                      className="block px-3 py-2 text-sm text-gray-600 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                      className="block px-3 py-2 text-sm text-gray-600 hover:text-sky-blue hover:bg-gray-50 transition-all duration-200 rounded-md focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 group"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       <span className="group-hover:font-semibold transition-all duration-200">{area.name}</span>
@@ -227,7 +227,7 @@ export default function Header() {
               
               <Link
                 href="/reviews/"
-                className="block px-3 py-2 text-gray-700 hover:text-sky-blue hover:bg-gray-50 font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                className="block px-3 py-2 text-gray-700 hover:text-sky-blue hover:bg-gray-50 font-medium transition-all duration-200 rounded-md focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 group"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span className="group-hover:font-semibold transition-all duration-200">Reviews</span>
@@ -235,7 +235,7 @@ export default function Header() {
               
               <Link
                 href="/contact/"
-                className="block px-3 py-2 text-gray-700 hover:text-sky-blue hover:bg-gray-50 font-medium transition-all duration-200 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 group"
+                className="block px-3 py-2 text-gray-700 hover:text-sky-blue hover:bg-gray-50 font-medium transition-all duration-200 rounded-md focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 group"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span className="group-hover:font-semibold transition-all duration-200">Contact</span>
@@ -244,7 +244,7 @@ export default function Header() {
               <div className="px-3 py-2 border-t">
                 <a
                   href="tel:+16505550199"
-                  className="flex items-center space-x-2 text-navy font-semibold hover:text-sky-blue transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-sky-blue focus:ring-offset-2 rounded px-2 py-1 group"
+                  className="flex items-center space-x-2 text-navy font-semibold hover:text-sky-blue transition-all duration-200 focus:outline-none focus-visible:outline-2 focus-visible:outline-sky-blue focus-visible:outline-offset-2 rounded px-2 py-1 group"
                   aria-label="Call us at (650) 555-0199"
                 >
                   <Phone className="w-4 h-4" aria-hidden="true" />
