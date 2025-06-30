@@ -8,14 +8,28 @@ interface ServiceCardProps {
   icon: React.ReactNode
   href: string
   features: string[]
+  headingLevel?: 2 | 3 | 4
 }
 
-export default function ServiceCard({ title, description, icon, href, features }: ServiceCardProps) {
+export default function ServiceCard({ title, description, icon, href, features, headingLevel = 3 }: ServiceCardProps) {
+  const renderHeading = () => {
+    const className = "font-poppins font-semibold text-xl text-navy"
+    
+    switch (headingLevel) {
+      case 2:
+        return <h2 className={className}>{title}</h2>
+      case 4:
+        return <h4 className={className}>{title}</h4>
+      default:
+        return <h3 className={className}>{title}</h3>
+    }
+  }
+
   return (
     <article className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6 h-full flex flex-col">
       <div className="flex items-center space-x-3 mb-4">
         <div className="w-12 h-12 bg-sky-blue/10 rounded-lg flex items-center justify-center text-sky-blue">{icon}</div>
-        <h3 className="font-poppins font-semibold text-xl text-navy">{title}</h3>
+        {renderHeading()}
       </div>
 
       <p className="text-gray-600 mb-4 flex-grow">{description}</p>
