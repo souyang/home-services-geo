@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 import { Suspense } from 'react'
 import { Phone } from 'lucide-react'
-it coimport LoadingSpinner from './LoadingSpinner'
+import LoadingSpinner from './LoadingSpinner'
 
 // Dynamically import ContactForm with loading fallback
 const ContactForm = dynamic(() => import('./ContactForm'), {
